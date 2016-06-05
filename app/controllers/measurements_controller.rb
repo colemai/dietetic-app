@@ -14,7 +14,7 @@ class MeasurementsController < ApplicationController
 
   # GET /measurements/new
   def new
-    @measurement = Measurement.new
+    @measurement = current_user.measurements.build
   end
 
   # GET /measurements/1/edit
@@ -24,7 +24,7 @@ class MeasurementsController < ApplicationController
   # POST /measurements
   # POST /measurements.json
   def create
-    @measurement = Measurement.new(measurement_params)
+    @measurement = current_user.measurements.build(measurement_params)
 
     respond_to do |format|
       if @measurement.save
