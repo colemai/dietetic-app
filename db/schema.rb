@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160606120252) do
+ActiveRecord::Schema.define(version: 20160605150510) do
 
   create_table "measurements", force: :cascade do |t|
     t.float    "height"
