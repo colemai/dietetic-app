@@ -13,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% @measurements.each do |measurement| %>
+    <% current_user.measurements.each do |measurement| %>
       <tr>
         <td><%= measurement.height %></td>
         <td><%= measurement.weight %></td>
@@ -31,3 +31,4 @@
 <br>
 
 <%= link_to 'New Measurement', new_measurement_path, class: "btn btn-success" %>
+<%= link_to 'Back', :back, class: "btn btn-success" %>
