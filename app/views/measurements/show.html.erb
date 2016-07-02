@@ -15,5 +15,10 @@
   <%= @measurement.pal %>
 </p>
 
+<p>
+  <strong>BMI:</strong>
+  <%= @measurement.bmi %>
+</p>
+
 <%= link_to 'Edit', edit_measurement_path(@measurement) %> |
 <%= link_to 'Back', measurements_path %>

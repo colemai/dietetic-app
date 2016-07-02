@@ -21,8 +21,9 @@
   </div>
   <div class="field">
     <%= f.label :pal %><br>
-    <%= f.text_field :pal %>
+    <%= f.range_field :pal, :min=>0, :max =>2.4, :class => "slide", :id => "palSlider", :width=>50  %>
   </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

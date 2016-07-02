@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160605150510) do
+ActiveRecord::Schema.define(version: 20160608154110) do
 
   create_table "measurements", force: :cascade do |t|
     t.float    "height"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160605150510) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.float    "bmi"
   end
 
   add_index "measurements", ["user_id"], name: "index_measurements_on_user_id"
