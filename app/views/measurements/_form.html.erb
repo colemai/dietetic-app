@@ -1,3 +1,5 @@
+<div class="container">
+
 <%= form_for(@measurement) do |f| %>
   <% if @measurement.errors.any? %>
     <div id="error_explanation">
@@ -11,6 +13,7 @@
     </div>
   <% end %>
 
+  
   <div class="field">
     <%= f.label :height %><br>
     <%= f.text_field :height %>
@@ -23,8 +26,18 @@
     <%= f.label :pal %><br>
     <%= f.range_field :pal, :min=>0, :max =>2.4, :class => "slide", :id => "palSlider", :width=>50  %>
   </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.text_field :age %>
+  </div>
   
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+</div>

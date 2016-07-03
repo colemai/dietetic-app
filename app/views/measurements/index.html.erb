@@ -5,10 +5,13 @@
 <table class="table">
   <thead>
     <tr>
+      <th>Gender</th>
+      <th>Age</th>
       <th>Height</th>
       <th>Weight</th>
       <th>Pal</th>
       <th>BMI</th>
+      <th>Calorie Requirements</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -16,10 +19,13 @@
   <tbody>
     <% current_user.measurements.each do |measurement| %>
       <tr>
+        <td><%= measurement.gender %></td>
+        <td><%= measurement.age %></td>
         <td><%= measurement.height %></td>
         <td><%= measurement.weight %></td>
         <td><%= measurement.pal %></td>
         <td><%= measurement.bmi %></td>
+        <td><%= measurement.req %></td>
         <td><%= link_to 'Show', measurement %></td>
       <% if measurement.user == current_user %>
         <td><%= link_to 'Edit', edit_measurement_path(measurement) %></td>
