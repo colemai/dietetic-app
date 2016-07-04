@@ -25,7 +25,7 @@
         <td><%= measurement.weight %></td>
         <td><%= measurement.pal %></td>
         <td><%= measurement.bmi %></td>
-        <td><%= measurement.req %></td>
+        <td><%= measurement.req(measurement.weight,measurement.pal) %></td>
         <td><%= link_to 'Show', measurement %></td>
       <% if measurement.user == current_user %>
         <td><%= link_to 'Edit', edit_measurement_path(measurement) %></td>
