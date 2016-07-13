@@ -37,6 +37,11 @@
 </table>
 
 <br>
+<% if Measurement.count == 0 %>
+  <%= link_to 'New Measurement', new_measurement_path, class: "btn btn-success" %>
+<% else %>
+  <%= link_to 'Edit Details', edit_measurement_path(Measurement.last), class: "btn btn-success" %>
+<% end %>
 
-<%= link_to 'New Measurement', new_measurement_path, class: "btn btn-success" %>
+
 <%= link_to 'Back', :back, class: "btn btn-success" %>
