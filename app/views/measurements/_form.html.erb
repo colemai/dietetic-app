@@ -14,10 +14,10 @@
     </div>
   <% end %>
 
-  <%= f.input :height,  label: "Height in meters" %>
+  <%= f.input :height,  label: "Height in meters", input_html: {step: '0.1', min: '0.1'}  %>
   <%= f.input :weight, label: "Weight in kilograms" %>
-  <%= f.input :pal %>
-  <%= f.input :gender, label: "Gender (enter as male or female)" %>
+  <%= f.input :pal, input_html: {step: '0.1', min: '1.0'} %>
+  <%= f.input :gender, collection: ["Male","Female"] %>
   <%= f.input :age %>
   <%= f.button :submit %>
 <% end %>

@@ -1,11 +1,9 @@
 class Measurement < ActiveRecord::Base
   belongs_to :user
 
-  before_validation {|measurement| measurement.gender = gender.downcase}
-
   validates :height, inclusion: { in: (1.1..3.0), message: "must be entered as a meter value" }
-  validates :gender, inclusion: { in: %w(male female), message: "Male or female please"}
-
+  validates :gender, inclusion: { in: %w(Male Female), message: "Male or female please"}
+  validates :age, inclusion: { in: (18..120), message: "must be a full number between 18 and 120"}
   def bmi
   	bmi = (weight / (height*height)).round(2)
   end
