@@ -26,10 +26,8 @@
         <td><%= measurement.pal %></td>
         <td><%= measurement.bmi %></td>
         <td><%= measurement.req(measurement.weight,measurement.pal) %></td>
-        <td><%= link_to 'Show', measurement %></td>
-      <% if measurement.user == current_user %>
+        <% if measurement.user == current_user %>
         <td><%= link_to 'Edit', edit_measurement_path(measurement) %></td>
-        <td><%= link_to 'Destroy', measurement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>
