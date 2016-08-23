@@ -1,7 +1,23 @@
-<h1>Home</h1>
-<p>Welcome to Quantify Nutrition! The most accurate calculator for energy requirements on the web. 
+<div class="container-fluid image-bg-fixed-height">
 
-Quantify Nutrition is coded and run by a registered dietitian and as such you can be guaranteed that every aspect of this free service is steeped in evidence-based science. 
+<p class="alert"><%= alert %></p>
+<p class= "notice"><%= notice %></p>
 
-Knowledge is power, understand your body to better conquer it</p>
 
+<div class="container">
+	<h1>Home</h1></br>
+		<p>Welcome to Quantify Nutrition! The most accurate calculator for energy requirements on the web.</br></br>Quantify Nutrition is coded and run by a registered dietitian and as such you rest assured that every aspect of this free service is steeped in evidence-based science.</br></br>Knowledge is power, understand your body to better conquer it</p></br>
+</div>
+
+
+<div id="user-nav">
+<% if user_signed_in? %>
+<p> Hi <%= current_user.email %>. Not you? <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+  <% else %>
+  <%= button_to('Sign in', new_user_session_path, :class => 'btn btn-large btn-primary') %> or <%= button_to('Register', new_user_registration_path, :class => 'btn btn-large btn-primary', :method => :get)  %>
+
+<% end %>
+</p>
+</div>
+
+</div>
